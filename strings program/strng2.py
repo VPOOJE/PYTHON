@@ -1,30 +1,10 @@
-'''Write a Python function that takes a sentence and returns
-the longest word and the length of the longest one'''
+def swap_strings(string1, string2):
+    swapped_string1 = string2[:2] + string1[2:]
+    swapped_string2 = string1[:2] + string2[2:]
+    return swapped_string1 + ' ' + swapped_string2
 
+string1 = input("Enter the first string: ")
+string2 = input("Enter the second string: ")
 
-def longest_word(sentence):
-    words = sentence.split()
-    longest = ''
-    length = 0
-
-    for word in words:
-        if len(word) > length:
-            longest = word
-            length = len(word)
-
-    return longest, length
-
-input_sentence = input("Enter a sentence: ")
-result_word, result_length = longest_word(input_sentence)
-print("Longest word:", result_word)
-print("Length of the longest word:", result_length)
-
-
-
-
-
-
-
-
-
-      
+result = swap_strings(string1, string2)
+print("Swapped string:", result)
